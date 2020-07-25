@@ -31,5 +31,10 @@ RUN pip3 install pip -U  -i https://pypi.tuna.tsinghua.edu.cn/simple \
     && pip install torch-scatter torch-sparse torch-cluster torch-geometric torch-spline-conv
 ## END - Python packages
 
+# TensorBoard
+EXPOSE 6006
+# IPython
 EXPOSE 8888
+
+
 CMD ["bash", "-c", "jupyter lab --ip 0.0.0.0 --port=8888 --notebook-dir=/home/leejt --no-browser --allow-root"]
