@@ -8,6 +8,8 @@ ENV HOME /home/$NB_USER
 RUN sed -i s@/archive.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list \
     && apt-get update\
     && apt-get install -y  git \
+                        zsh \
+                        git-core\
                         openssh-server \
                         vim \
                         tree \
@@ -17,6 +19,7 @@ RUN sed -i s@/archive.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list \
                         zip \
                         build-essential \
                         curl \
+                        
     # Clean up
     && apt-get autoremove -y \
     && apt-get clean -y \
@@ -43,10 +46,6 @@ RUN pip3 install pip -U  -i https://pypi.tuna.tsinghua.edu.cn/simple \
 #     -p https://github.com/zsh-users/zsh-syntax-highlighting
 
 # install zsh
-RUN apt-get update && apt-get install -y \
-    zsh \
-    git-core && rm -rf /var/lib/apt/lists/*
-    
 RUN git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh \
     && cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc \
     && chsh -s /bin/zsh
