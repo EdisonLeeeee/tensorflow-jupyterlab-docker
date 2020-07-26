@@ -8,11 +8,12 @@ pygsp
 watermark
 pyforest
 pympler
-jupytext
 beeprint
 pipreqs
 memory_profiler
 cupy-cuda102
+pretty_errors
+tqdm
 metis==0.2a4
 networkx==2.3
 numba==0.46.0
