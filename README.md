@@ -10,6 +10,7 @@ On start, the container will start in jupyter lab,
 + CUDA 10.2
 + Python 3.6
 + Jupyterlab
++ zsh
 
 # Usage
 ## Remove all dangling images
@@ -28,7 +29,7 @@ docker pull edisonleejt/tensorflow:2.1.0-gpu-py3-jupyterlab
 ## Run
 Before that, you should install [nvidia-docker](https://github.com/NVIDIA/nvidia-docker) to use GPUs.
 ```
-docker run -u $(id -u):$(id -g) -itd --rm --gpus all --name <-Container Name-> -p <-Your Port->:8888 -v /home/$USER:/home/$USER <-Image Name->
+docker run -itd --rm --gpus all --name <-Container Name-> -p <-Your Port->:8888 -v /home/$USER:/home/$USER -e NB_USER=$USER <-Image Name->
 ```
 ## Get your jupyterlab token
 ```
@@ -49,5 +50,5 @@ docker stop <-Container Name->
 # start a container
 docker start <-Container Name->
 # enter existing container
-docker exec -it  <-Container Name-> bash
+docker exec -it  <-Container Name-> zsh
 ```
