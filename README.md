@@ -29,16 +29,26 @@ docker pull edisonleejt/tensorflow:2.1.0-gpu-py3-jupyterlab
 ## Run
 Before that, you should install [nvidia-docker](https://github.com/NVIDIA/nvidia-docker) to use GPUs.
 ```
-docker run -u $(id -u):$(id -g) -itd --rm --gpus all--name <-Container Name-> -p 8888:8888 -v /home/$USER:/home/$USER <-Image Name->
+docker run -u $(id -u):$(id -g) -itd --rm --gpus all --name <-Container Name-> -p <-Your Port->:8888 -v /home/$USER:/home/$USER <-Image Name->
 ```
-## Enter existing container
+## Get your jupyterlab token
 ```
-docker stop <-Container Name->
-docker start <-Container Name->
-docker exec -it  <-Container Name-> bash
+jupyter notebook list
 ```
+and the output will be the following
+```
+Currently running servers:
+http://0.0.0.0:8888/?token=xxxxxxxxxx :: /home/leejt
+```
+copy your token and paste it when you log in.
 
-## Start jupyter lab
+## Others
+
 ```
-jupyter lab --ip 0.0.0.0 --port=8888 --no-browser --allow-root
+# stop a container
+docker stop <-Container Name->
+# start a container
+docker start <-Container Name->
+# enter existing container
+docker exec -it  <-Container Name-> bash
 ```
