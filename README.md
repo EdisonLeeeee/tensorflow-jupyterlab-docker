@@ -10,7 +10,7 @@ On start, the container will start in jupyter lab,
 + CUDA 10.2
 + Python 3.6
 + Jupyterlab
-+ zsh
++ ZSH
 
 # Usage
 ## Remove all dangling images
