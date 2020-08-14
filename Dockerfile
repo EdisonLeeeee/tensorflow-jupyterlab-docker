@@ -33,6 +33,7 @@ RUN sed -i s@/archive.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list \
                         git \
                         vim \
                         zsh-syntax-highlighting \
+                        net-tools \
     && apt-get install -y npm \
     # Clean up
     && apt-get autoremove -y \

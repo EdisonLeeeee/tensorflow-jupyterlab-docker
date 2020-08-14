@@ -19,7 +19,7 @@ Cython
 requests
 opencv-python
 ogb
-metis==0.2a4
+eageypy
 networkx==2.3
 numba==0.46.0
 scipy==1.4.1
@@ -29,5 +29,6 @@ pandas==0.25.3
 gensim==3.8.0
 numpy==1.18.1
 metis==0.2a4
-scikit_learn==0.23.1
+scikit_learn==0.22
 tensorboardX==2.1
+tensorflow==2.1.0
