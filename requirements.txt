@@ -19,7 +19,7 @@ Cython
 requests
 opencv-python
 ogb
-eageypy
+eagerpy
 networkx==2.3
 numba==0.46.0
 scipy==1.4.1
