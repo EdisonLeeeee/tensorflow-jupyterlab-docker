@@ -32,4 +32,4 @@ numpy==1.18.1
 metis==0.2a4
 scikit_learn==0.22
 tensorboardX==2.1
-tensorflow==2.1.0
+tensorflow==2.1.2
